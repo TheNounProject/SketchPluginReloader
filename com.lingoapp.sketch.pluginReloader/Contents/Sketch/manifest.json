@@ -1,0 +1,35 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "Setup",
+      "identifier": "com.lingoapp.sketch.PluginReloader.setup",
+      "script": "commands.js",
+      "handler": "setup"
+    },
+    {
+      "name": "Reload",
+      "identifier": "com.lingoapp.sketch.PluginReloader.reload",
+      "script": "commands.js",
+      "shortcut": "ctrl option command r",
+      "handler": "reload"
+    }
+  ],
+  "menu": {
+    "title": "Plugin Reloader",
+    "items": [
+      "com.lingoapp.sketch.PluginReloader.reload",
+      "com.lingoapp.sketch.PluginReloader.setup"
+    ]
+  },
+  "version": "0.1.0",
+  "description": "A simple plugin to reload another plugins",
+  "name": "Plugin Reloader",
+  "identifier": "Plugin Reloader",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com/TheNounProject/SketchPluginReloader/master/.appcast.xml",
+  "author": "Wes Byrne",
+  "authorEmail": "wesburn@me.com"
+}
