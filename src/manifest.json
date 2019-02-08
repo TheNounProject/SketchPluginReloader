@@ -5,13 +5,13 @@
   "commands": [
     {
       "name": "Setup",
-      "identifier": "com.lingoapp.PluginReloader.setup",
+      "identifier": "com.lingoapp.sketch.PluginReloader.setup",
       "script": "./commands.js",
       "handler": "setup"
     },
     {
       "name": "Reload",
-      "identifier": "com.lingoapp.PluginReloader.reload",
+      "identifier": "com.lingoapp.sketch.PluginReloader.reload",
       "script": "./commands.js",
       "shortcut" : "ctrl option command r",
       "handler": "reload"
@@ -20,8 +20,8 @@
   "menu": {
     "title": "Plugin Reloader",
     "items": [
-      "com.lingoapp.PluginReloader.reload",
-      "com.lingoapp.PluginReloader.setup"
+      "com.lingoapp.sketch.PluginReloader.reload",
+      "com.lingoapp.sketch.PluginReloader.setup"
     ]
   }
 }

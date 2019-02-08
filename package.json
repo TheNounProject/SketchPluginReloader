@@ -8,7 +8,7 @@
   "skpm": {
     "name": "Plugin Reloader",
     "manifest": "src/manifest.json",
-    "main": "{{ slug }}.sketchplugin",
+    "main": "com.lingoapp.sketch.pluginReloader",
     "assets": [
       "assets/**/*"
     ]
