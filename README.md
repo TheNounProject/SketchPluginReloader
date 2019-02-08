@@ -10,3 +10,7 @@ In cases where you would need to restart Sketch to refresh your plugin, Plugin R
 2. Select setup (reload will also work the first time)
 3. Enter the identifier of the plugin you are developing and want to reload.
 4. Select reload
+
+## Thanks
+
+Thanks to [@robintindale](https://github.com/robintindale) for sharing how to reload the plugins.
