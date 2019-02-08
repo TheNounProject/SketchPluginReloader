@@ -1,5 +1,5 @@
 # build artifacts
-{{ slug }}.sketchplugin
+PluginReloader.sketchplugin
 
 # npm
 node_modules
