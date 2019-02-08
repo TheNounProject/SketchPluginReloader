@@ -1,5 +1,6 @@
 {
   "name": "Plugin-Reloader",
+  "description": "A simple plugin to reload another plugins",
   "version": "0.1.0",
   "engines": {
     "sketch": ">=3.0"
@@ -11,6 +12,9 @@
     "assets": [
       "assets/**/*"
     ]
+  },
+  "repository": {
+    "url": "https://github.com/TheNounProject/SketchPluginReloader"
   },
   "scripts": {
     "build": "skpm-build",
