@@ -1,0 +1,27 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "Setup",
+      "identifier": "com.lingoapp.PluginReloader.setup",
+      "script": "./commands.js",
+      "handler": "setup"
+    },
+    {
+      "name": "Reload",
+      "identifier": "com.lingoapp.PluginReloader.reload",
+      "script": "./commands.js",
+      "shortcut" : "ctrl option command r",
+      "handler": "reload"
+    }
+  ],
+  "menu": {
+    "title": "Plugin Reloader",
+    "items": [
+      "com.lingoapp.PluginReloader.reload",
+      "com.lingoapp.PluginReloader.setup"
+    ]
+  }
+}
