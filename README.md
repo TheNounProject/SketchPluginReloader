@@ -2,7 +2,7 @@
 
 This plugin was created to help developers making Sketh plugins.
 
-In cases where you would need to restart Sketch to refresh your plugin, Plugin Reloader will disable and enable the plugin to achieve the same result without restarting Sketch.
+In cases where you would need to restart Sketch to refresh your plugin, Plugin Reloader will disable and enable the plugin to achieve the same result without restarting Sketch. You might find this handy if you use `shouldKeepAround` or other long running tasks.
 
 ## How
 
