@@ -1,8 +1,10 @@
 ## What is this?
 
-This plugin was created to help developers making Sketh plugins.
+This plugin is intended to help Sketch plugin developers.
 
-In cases where you would need to restart Sketch to refresh your plugin, Plugin Reloader will disable and enable the plugin to achieve the same result without restarting Sketch.
+In cases where restarting Sketch is necessary to refresh your plugin, Plugin Reloader will disable and enable the plugin to achieve a similar result without restarting Sketch. You might find this handy if you use `shouldKeepAround` or other long running tasks.
+
+Note that ObjC frameworks aren't reloaded.
 
 ## How
 
