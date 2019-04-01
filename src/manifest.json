@@ -15,13 +15,21 @@
       "script": "./commands.js",
       "shortcut" : "ctrl option command r",
       "handler": "reload"
+    },
+    {
+      "name": "Help",
+      "identifier": "com.lingoapp.sketch.PluginReloader.help",
+      "script": "./commands.js",
+      "handler": "openHelp"
     }
   ],
   "menu": {
     "title": "Plugin Reloader",
     "items": [
       "com.lingoapp.sketch.PluginReloader.reload",
-      "com.lingoapp.sketch.PluginReloader.setup"
+      "-",
+      "com.lingoapp.sketch.PluginReloader.setup",
+      "com.lingoapp.sketch.PluginReloader.help"
     ]
   }
 }
