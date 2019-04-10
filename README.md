@@ -14,7 +14,7 @@ Note that ObjC frameworks aren't reloaded.
 4. If desired, add a command identifier from your plugin to run after reloading. More info in [Query Strings & Handling Reloads](#handling-reloads)
 4. Select reload
 
-## Query Strings & Handling Reloads
+## Handling Reloads
 
 <a id="handling-reloads"></a>
 
