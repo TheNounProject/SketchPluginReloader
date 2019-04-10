@@ -20,13 +20,13 @@ Note that ObjC frameworks aren't reloaded.
 
 There are two ways to handle your plugin being reloaded.
 
-### 2. Run a Command
+### 1. Run a Command
 
 > Note: Support coming in a future release of Sketch (current is 54).
 
 If you just want to run an existing command after your plugin is reloaded, simply provide the command identifier from your plugin.
 
-### 1. HandleURL Action
+### 2. HandleURL Action
 
 If no command identifier is provided (or in Sketch 54 or earlier) you can handle the reload maually if needed. The HandleURL action will be called after reloading.
 
