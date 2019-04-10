@@ -11,13 +11,25 @@ Note that ObjC frameworks aren't reloaded.
 1. Install the plugin
 2. Select setup (reload will also work the first time)
 3. Enter the identifier of the plugin you are developing and want to reload.
-4. If desired, add a query string to send to your plugin. More info in [Query Strings & Handling Reloads](#handling-reloads)
+4. If desired, add a command identifier from your plugin to run after reloading. More info in [Query Strings & Handling Reloads](#handling-reloads)
 4. Select reload
 
 ## Query Strings & Handling Reloads
 <a id="handling-reloads"></a<>
 
-As part of the setup, you can optionally provide a query string to send data to your plugin after it is reloaded. This will be delivered via a handler registered for the `HandleURL` action.
+There are two ways to handle your plugin being reloaded.
+
+### 2. Run a Command
+
+> Note: Support coming in a future release of Sketch (current is 54).
+
+If you just want to run an existing command after your plugin is reloaded, simply provide the command identifier from your plugin.
+
+### 1. HandleURL Action
+
+If no command identifier is provided (or in Sketch 54 or earlier) you can handle the reload maually if needed. The HandleURL action will be called after reloading.
+
+The query string always includes `reload=1` but you can provide additional info if needed by entering a query string instead of a command identifier during setup (not this must begin with `?`)
 
 An example maniftest would look like:
 ```js
