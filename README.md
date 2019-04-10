@@ -15,7 +15,8 @@ Note that ObjC frameworks aren't reloaded.
 4. Select reload
 
 ## Query Strings & Handling Reloads
-<a id="handling-reloads"></a<>
+
+<a id="handling-reloads"></a>
 
 There are two ways to handle your plugin being reloaded.
 
