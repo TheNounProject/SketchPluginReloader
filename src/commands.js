@@ -18,18 +18,19 @@ export const setup = function() {
 
 function promptForCommand() {
   sketch.UI.getInputFromUser(
-    "(2/2) Send data to your plugin after reloading.",
+    "(2/2) Run a command in your plugin",
     {
       initialValue: sketch.Settings.settingForKey("targetPluginQuery") || "",
       description:
-        "Provide a query string to send data to the plugin after reloading. ex. `dance=moonwalk&skill=high`.\n\nNote, you will need to add a handler to your plugin to use this."
+        "Provide a command indentifier in your plugin to run after it is reloaded. You can optionally provide a query string"
     },
     (err, value) => {
-      sketch.Settings.setSettingForKey("targetPluginQuery", null);
-      if (value) {
+      sketch.Settings.setSettingForKey("targetPluginQuery", value);
+
+      if (value && value.indexOf("?") >= 0) {
         sketch.UI.alert(
           "Setup Complete",
-          "Note you will need to setup a handler in your plugin to use this extra data.\n\nSee help in Plugins > Plugin Reloader > Help for more info."
+          "It looks like you supplied a query string. Note that you will need to setup a handler in your plugin to use this extra data.\n\nSee help in Plugins > Plugin Reloader > Help for more info."
         );
       }
       reload();
@@ -66,8 +67,17 @@ export const reload = function() {
     pm.enablePlugin_(plugin);
     pm.reloadPlugins();
 
-    const query = sketch.Settings.settingForKey("targetPluginQuery");
-    let urlString = `${appURL()}/${identifier}?reload=1&${query}`;
+    let query = sketch.Settings.settingForKey("targetPluginQuery");
+    if (!query) {
+      query = "?reload=1"
+    } else if (query.indexOf("?") >= 0) {
+      query += "&reload=1"
+    } else {
+      query += "?reload=1"
+    }
+
+    let urlString = `${appURL()}/${identifier}/${query}`;
+    console.log(urlString)
     openURL(urlString);
 
     sketch.UI.message(`🔄 Plugin Reloaded - ${identifier}`);
