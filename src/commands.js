@@ -42,7 +42,7 @@ function appURL() {
   const app = String(MSArchiveHeader.metadataForNewHeader()["app"]);
   switch (app) {
     case "com.bohemiancoding.sketch3":
-      return "sketch://plugin";
+      return "sketch-nonappstore://plugin";
     case "com.bohemiancoding.sketch3.beta":
       return "sketch-beta://plugin";
     case "com.bohemiancoding.sketch3.private":
