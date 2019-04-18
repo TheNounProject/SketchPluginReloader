@@ -1,7 +1,7 @@
 {
   "name": "plugin-reloader",
   "description": "A simple plugin to reload another plugins",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "engines": {
     "sketch": ">=3.0"
   },
